@@ -20,5 +20,18 @@ class BaseRepository implements BaseRepositoryInterface
     {
         return $this->model->create($data);
     }
+    public function find($id)
+    {
+        return $this->model->find($id);
+    }
+    public function update($data, $id)
+    {
+        return $this->model->update($data, $id);
+    }
+    public function delete($id)
+    {
+        return $this->model->delete();
+    }
+
 
 }

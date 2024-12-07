@@ -1,5 +1,5 @@
 <?php
-namespace App\Repositories;
+namespace App\Repositories\Auth;
 
 use App\Models\User;
 use App\Repositories\BaseRepository;
@@ -59,7 +59,7 @@ class AuthRepository extends BaseRepository
         }
     }
 
-    public function logout($data)
+    public function logout()
     {
         $accessToken = Auth::guard('api')->user()->token();
         $accessToken->revoke();

@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\LoginRequest;
-use App\Http\Requests\SignupRequest;
+use App\Http\Requests\Auth\LoginRequest;
+use App\Http\Requests\Auth\SignupRequest;
 use App\Models\User;
-use App\Repositories\AuthRepository;
+use App\Repositories\Auth\AuthRepository;
 use Illuminate\Http\Request;
 
 class AuthController extends Controller
@@ -18,7 +18,7 @@ class AuthController extends Controller
     }
     /**
      * Signup Here
-     * @param \App\Http\Requests\SignupRequest;
+     * @param \App\Http\Requests\Auth\SignupRequest;
      */
     public function signup(SignupRequest $request)
     {
@@ -26,7 +26,7 @@ class AuthController extends Controller
     }
     /**
      * Summary of login
-     * @param \App\Http\Requests\LoginRequest;
+     * @param \App\Http\Requests\Auth\LoginRequest;
      * @return mixed|\Illuminate\Contracts\Routing\ResponseFactory|\Illuminate\Http\JsonResponse|\Illuminate\Http\Response
      */
     public function login(LoginRequest $request)
@@ -38,9 +38,9 @@ class AuthController extends Controller
      * @param \Illuminate\Http\Request $request
      * @return mixed|\Illuminate\Contracts\Routing\ResponseFactory|\Illuminate\Http\JsonResponse|\Illuminate\Http\Response
      */
-    public function logout(Request $request)
+    public function logout()
     {
-        return $this->user->logout($request);
+        return $this->user->logout();
     }
     /**
      * Summary of userDetails
