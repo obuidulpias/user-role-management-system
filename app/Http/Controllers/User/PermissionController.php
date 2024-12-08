@@ -12,6 +12,12 @@ use Illuminate\Routing\Controllers\Middleware;
 
 class PermissionController extends Controller implements HasMiddleware
 {
+    /**
+     * Summary of middleware
+     * 
+     * Check user permission is valid or not
+     * @return array
+     */
     public static function middleware(): array
     {
         return [
