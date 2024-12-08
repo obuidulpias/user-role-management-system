@@ -30,5 +30,8 @@ Route::group(['middleware' => 'auth:api'], function () {
     Route::get('/role/{id}/edit', action: [RoleController::class, 'edit']);
     Route::post('/role/{id}/update', action: [RoleController::class, 'update']);
     Route::delete('/role/{id}/delete', action: [RoleController::class, 'destroy']);
+    //role assign user
+    Route::post('/role/{id}/assign', action: [RoleController::class, 'assign']);
+
 });
 

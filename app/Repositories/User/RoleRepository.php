@@ -1,6 +1,7 @@
 <?php
 namespace App\Repositories\User;
 
+use App\Models\User;
 use App\Repositories\BaseRepository;
 use Auth;
 use DB;
@@ -29,6 +30,7 @@ class RoleRepository extends BaseRepository
     public function create($data)
     {
         //dd($data['permisssion_data']);
+        DB::beginTransaction();
         try {
             $role_data = [
                 'name' => $data['name'],
@@ -39,6 +41,7 @@ class RoleRepository extends BaseRepository
                     $role->givePermissionTo($name);
                 }
             }
+            DB::commit();
             return $this->response = apiResponse($role);
         } catch (\Exception $e) {
             return $this->response = errorResponse('', $e);
@@ -59,21 +62,17 @@ class RoleRepository extends BaseRepository
     {
         DB::beginTransaction();
         try {
-            //dd($data['permisssion_data']);
             $role = $this->role->find($id);
+            //$role = Role::find($id);
             if (!empty($role)) {
-                //$permission->name = $data['name'];
-                $role_data = [
-                    'name' => $data['name'],
-                ];
-                $new_role = $role->update($role_data);
+                $role->update(['name' => $data['name']]);
                 if (!empty($data['permisssion_data'])) {
-                    $new_role->syncPermissions($data['permisssion_data']);
+                    $role->syncPermissions($data['permisssion_data']);
                 } else {
-                    $new_role->syncPermissions([]);
+                    $role->syncPermissions([]);
                 }
                 DB::commit();
-                return $this->response = apiResponse($new_role, 'Data updated successfully.');
+                return $this->response = apiResponse($role, 'Data updated successfully.');
             } else {
                 return $this->response = apiResponse($role, 'Data not found.');
             }
@@ -86,10 +85,37 @@ class RoleRepository extends BaseRepository
     public function destroy($id)
     {
         try {
-            $role = $this->role->find($id)->delete();
+            $role = $this->role->find($id);
+            if (!empty($role)) {
+                $role->delete();
+                return $this->response = apiResponse($role, 'Data deleted successfully.');
+            } else {
+                return $this->response = apiResponse($role, 'Data not found.');
+            }
+        } catch (\Exception $e) {
+            return $this->response = errorResponse('', $e);
+        }
+    }
 
-            //$role->delete();
-            return $this->response = apiResponse($role, 'Data deleted successfully.');
+    public function assign($data, $id)
+    {
+        DB::beginTransaction();
+        try {
+            $user = User::find($id);
+            //dd($user);
+            //$role = Role::find($id);
+            if (!empty($user)) {
+                if (!empty($data['role_data'])) {
+                    $user->syncRoles($data['role_data']);
+                } else {
+                    $user->syncPermissions([]);
+                }
+                DB::commit();
+                return $this->response = apiResponse($user, 'Data updated successfully.');
+            } else {
+                return $this->response = apiResponse($user, 'Data not found.');
+            }
+
         } catch (\Exception $e) {
             return $this->response = errorResponse('', $e);
         }

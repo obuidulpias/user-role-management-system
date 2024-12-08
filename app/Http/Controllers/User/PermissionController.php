@@ -7,9 +7,20 @@ use App\Http\Requests\User\PermissionRequest;
 use App\Repositories\User\PermissionRepository;
 use Illuminate\Http\Request;
 use Spatie\Permission\Models\Permission;
+use Illuminate\Routing\Controllers\HasMiddleware;
+use Illuminate\Routing\Controllers\Middleware;
 
-class PermissionController extends Controller
+class PermissionController extends Controller implements HasMiddleware
 {
+    public static function middleware(): array
+    {
+        return [
+            new Middleware('permission:view', only: ['list']),
+            new Middleware('permission:create', only: ['create']),
+            new Middleware('permission:edit', only: ['edit', 'update']),
+            new Middleware('permission:delete', only: ['destroy']),
+        ];
+    }
 
     protected $permission;
     /**

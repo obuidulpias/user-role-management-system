@@ -53,12 +53,17 @@ class PermissionRepository extends BaseRepository
     {
         try {
             $permission = $this->permission->find($id);
-            //$permission->name = $data['name'];
-            $permission_data = [
-                'name' => $data['name'],
-            ];
-            $permission->update($permission_data);
-            return $this->response = apiResponse($permission_data, 'Data updated successfully.');
+            if (!empty($permission)) {
+                //$permission->name = $data['name'];
+                $permission_data = [
+                    'name' => $data['name'],
+                ];
+                $permission = $permission->update($permission_data);
+                return $this->response = apiResponse($permission, 'Data updated successfully.');
+            } else {
+                return $this->response = apiResponse($permission, 'Data not found.');
+            }
+
         } catch (\Exception $e) {
             return $this->response = errorResponse('', $e);
         }
@@ -67,10 +72,13 @@ class PermissionRepository extends BaseRepository
     public function destroy($id)
     {
         try {
-            $permission = $this->permission->find($id)->delete();
-
-            //$permission->delete();
-            return $this->response = apiResponse($permission, 'Data deleted successfully.');
+            $permission = $this->permission->find($id);
+            if (!empty($permission)) {
+                $permission->delete();
+                return $this->response = apiResponse($permission, 'Data deleted successfully.');
+            } else {
+                return $this->response = apiResponse($permission, 'Data not found.');
+            }
         } catch (\Exception $e) {
             return $this->response = errorResponse('', $e);
         }

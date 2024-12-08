@@ -7,9 +7,21 @@ use App\Http\Requests\User\RoleRequest;
 use App\Repositories\User\RoleRepository;
 use Illuminate\Http\Request;
 use Spatie\Permission\Models\Role;
+use Illuminate\Routing\Controllers\HasMiddleware;
+use Illuminate\Routing\Controllers\Middleware;
 
-class RoleController extends Controller
+class RoleController extends Controller implements HasMiddleware
 {
+
+    public static function middleware(): array
+    {
+        return [
+            new Middleware('permission:view', only: ['list']),
+            new Middleware('permission:create', only: ['create', 'assign']),
+            new Middleware('permission:edit', only: ['edit', 'update']),
+            new Middleware('permission:delete', only: ['destroy']),
+        ];
+    }
     protected $role;
     /**
      * Create new role instance
@@ -74,6 +86,20 @@ class RoleController extends Controller
      */
     public function destroy($id)
     {
+        //dd($id);
         return $this->role->destroy($id);
+    }
+
+    /**
+     * Summary of update
+     * 
+     * @param \Illuminate\Http\Request;
+     * @param $id
+     * @return mixed|\Illuminate\Http\JsonResponse|\Illuminate\Http\Response
+     */
+    public function assign(Request $request, $id)
+    {
+        //dd($request);
+        return $this->role->assign($request, $id);
     }
 }

@@ -1,0 +1,1066 @@
+{
+	"info": {
+		"_postman_id": "214a6132-73c9-4ffd-b2eb-372b20ab4ecd",
+		"name": "USER-ROLE-MANAGEMENT",
+		"description": "A simple API documentation for User Role Permission syatem.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12482884"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Sign Up",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Pias",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "pias@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "confirm_password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/signup",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"signup"
+							]
+						},
+						"description": "Create new user."
+					},
+					"response": [
+						{
+							"name": "Sign Up",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Pias",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "pias@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456",
+											"type": "text"
+										},
+										{
+											"key": "confirm_password",
+											"value": "123456",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/signup",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"signup"
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 08 Dec 2024 15:39:17 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"The email has already been taken.\",\n    \"errors\": {\n        \"email\": [\n            \"The email has already been taken.\"\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Log In",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "sami@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login"
+							]
+						},
+						"description": "User can login to give valid information."
+					},
+					"response": [
+						{
+							"name": "Log In",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "sami@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/login",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 08 Dec 2024 15:37:39 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"User loged in successfully\",\n    \"data_list\": {\n        \"data\": {\n            \"id\": 2,\n            \"name\": \"Sami\",\n            \"email\": \"sami@gmail.com\",\n            \"email_verified_at\": null,\n            \"created_at\": \"2024-12-08T12:03:26.000000Z\",\n            \"updated_at\": \"2024-12-08T12:03:26.000000Z\"\n        },\n        \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZTIyZTNhNGQ5MzRmZTU4M2FjODllNjVlN2FiYzdhYjg5OTUyZDdhNjRhZDQxMzRjZGJlZGRhODUwNjI1ODNiN2FhY2RkMzQ4MzY0MTEyYmQiLCJpYXQiOjE3MzM2NzIyNTguMDkwNjEzLCJuYmYiOjE3MzM2NzIyNTguMDkwNjE3LCJleHAiOjE3NjUyMDgyNTcuMDUwMDIzLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.P5SqAphpWUvObAtBzG4u1Pmv49jzA37o1-buRE8xrQLQVX9vcPo02nPc1TH_xkAT9bo_4bWlXpdttRIJIFxomI_r6UHJpsvaL-E6GMlNIZLo6oNkvUYWUfAO0DoZ_3edFqduZ3ZkG0zsefcsP52DKk2UF-cDheEYKkjgy5F3zjPJkxjoXyAJi8_adahAVPiYlK3QzN08CdZWHn0Ft_lO05QTSxHUGzDYBn3HY4CHbW8uwzCve5YcR3EZEPc-SXNbfJ5CkAb4y-e__QnpUegkX7HcZW6KRLtOCIz-P_m7r24GpGlctfW2bwGJ59PE3Vzkc81VAtI4ijnojZZbBsQngXqYGoYTeiR6GnhRIKLsGCKqT-Rv46DO2uCapBzHsdzTKiH025_ogZNtHkIzCq5BpC1XXM8bvz9Ik27moyxcXV10BC_y-tR45k4W_A4xfz0stAD0jjyKtxwmVHvq8lJAqP72jigMzcVzJDH-NHgqMhdxkO3Saedv9eP-kfp6O8O-d-KPWM12yyZxTH7mSGw_GPsgzh-uYLO9e8vyWa9YQJvHMrrHU9VSNU0vbwCVWb5ozRPMasBmDMwcSAf4nOF1RdydPjJtxjbVNHzi0oAN1vKwh3-TIoSAHmuKSu-V_i-UlB6rWXbZhxgLDVgGdUPtGyHUrJ6G7zW9y0pOoYJhUyM\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Users",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZmU0OGIyODBmOWY3MDAzNTE2MGE2MWViMmQwMTliZTMzYzcyMDM0ZTI2OTlmYWZjYTFmMjk1N2I3MmFiOThmOTM0NzU0YzY1ZWRlYTQ2M2QiLCJpYXQiOjE3MzM1MDgxNTYuMTk4NDg3LCJuYmYiOjE3MzM1MDgxNTYuMTk4NDk1LCJleHAiOjE3NjUwNDQxNTUuODkyNzkzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TzYSrnHP8WfLvGtyoqbs6WPQ7-WgIjTWmsOH9KfnamHmtZXXA95vVtVpqVxBq5nIBdd2J8c2VLZGOKT4zC1XE2OWBP8vw6p6WMLFz8wtR5O3s_emEiazLB5DNYqJiuERrEKpRrVn9XvvbsFCmE0mtZtDn3SPld4wUNIJD_-hktP6Xt3N7_6AfsvcPTZbtjCLcFQoW2vX3yJGFxQt-4FRkURo6bbGvdPmk_lEyztGLqAZXBzgeEOlJsaKOOWW9mW3_kMB0Z41mLr1A-Z-NDVKs4hAtVH6-5lhMgrp9fJldGHYmBrObUxCAgJWmcOuUQ5A77N0veJ82ZdV_RyOoZGFRDNQLS6_5IklSePogFCyw1krnJ5R9aTQ8wONtNpba802enpYYqZUEXONj74ZUD-LUAnEv_oKZQZXKCTtGY2YqJwIPhm5hvMVUlzZ1e1g1xsRRF-8x8gZ2XavQvjEiqyTyezMl_fXWju3aXDeSUIMyvS6dxKX5tE_MLg69pQ_aOvnH8fmE-BpcFlWfXytld-9zeAEOL7-Q6rSp5W4NaCvuSU17KpYu8StYrbHqWsmIANZQ1MoW5si44_XXsJO-LlNOct0awsfY4BHoM9p3x-ff_a9RuNWJdAyIg4Ss3MjISnvVvxqTxcy-FGCgT3WSAZw4K0YcUGUS39eP28UHQNj1Jk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/users",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users"
+							]
+						},
+						"description": "To get all user information."
+					},
+					"response": []
+				},
+				{
+					"name": "Log Out",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMWEzZDkwMTQ4YWFjOWE5ZGU4ZTQ3MGE3MjkzNGE3YzVjYTUwZTAxYjg0MjgwYzA5Zjc5NGUxZTM0NTgxNjRkNWU1Y2IwNTViZjkxN2EzODIiLCJpYXQiOjE3MzM1MDY4MjQuNTA0Mjg5LCJuYmYiOjE3MzM1MDY4MjQuNTA0MzA1LCJleHAiOjE3NjUwNDI4MjQuMzc0NTQ2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.e7mli9FiQcsOrCEH5XLmsFgIphKD2Y0o__1VZ_AZ4w2wVNfU_J1Ph5ntHl8-FdbNK4IwcY-B4VQNAlB7Srh69H4SNvz38142vNv6_ghRMDBcz_iEH-NzIGyl5pxSv_MZTVkmbh-VXzAB81bz1f4QD-EIXnFM9Y96bUAsUl4ioFNeWSXq7zsQFMYzTJKWAVMmIYXk8730c5PR5JReU65qeAt5AmXJ8TR6f9vCHr_j8IHzn9akNndKaLMSEljEr8t_YfQEmEZYLiztWios4KhS36B87ASTKDwBQEsxvuC333xSvdc1da3ik-d-G_4H7cZLHF_5_KKWitrBMT6toAhRRmuS6iJU5ODjoK_KXvHxFl_Y0891rn2hRcaegl5HSiOzff4r2Npu7xre0YOuXr4TRkjtUNrSjc0QcPq3Cpi0EdEMsqLwM21K0Z-8MAlYj1xZ-xWbK-CeHZva9MOJUlXhGqDHO1UfrC3dMEJ1DjYEEw2TtdGSPOf1a1bhzqwsYXEh3TwxHXMc-ZCMk1zbrARlUKfN1PFcuAJAt8ibPNJEe4OE9Hr9dm_ZJ4pvKB-ptpSZlaitfNketym4vW_NBnRXget655iLOHw1ZqFNl9JxJjU4L7zldxuC2NZyp1G0UFO0pbRSu1FCiDd3V66Gze0yLDEnDyGj9a5P8IIoRklU1F8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/logout",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"logout"
+							]
+						},
+						"description": "User loged out"
+					},
+					"response": []
+				}
+			],
+			"description": "User authentication by Passport."
+		},
+		{
+			"name": "Role Permission",
+			"item": [
+				{
+					"name": "Permission Add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZmU0OGIyODBmOWY3MDAzNTE2MGE2MWViMmQwMTliZTMzYzcyMDM0ZTI2OTlmYWZjYTFmMjk1N2I3MmFiOThmOTM0NzU0YzY1ZWRlYTQ2M2QiLCJpYXQiOjE3MzM1MDgxNTYuMTk4NDg3LCJuYmYiOjE3MzM1MDgxNTYuMTk4NDk1LCJleHAiOjE3NjUwNDQxNTUuODkyNzkzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TzYSrnHP8WfLvGtyoqbs6WPQ7-WgIjTWmsOH9KfnamHmtZXXA95vVtVpqVxBq5nIBdd2J8c2VLZGOKT4zC1XE2OWBP8vw6p6WMLFz8wtR5O3s_emEiazLB5DNYqJiuERrEKpRrVn9XvvbsFCmE0mtZtDn3SPld4wUNIJD_-hktP6Xt3N7_6AfsvcPTZbtjCLcFQoW2vX3yJGFxQt-4FRkURo6bbGvdPmk_lEyztGLqAZXBzgeEOlJsaKOOWW9mW3_kMB0Z41mLr1A-Z-NDVKs4hAtVH6-5lhMgrp9fJldGHYmBrObUxCAgJWmcOuUQ5A77N0veJ82ZdV_RyOoZGFRDNQLS6_5IklSePogFCyw1krnJ5R9aTQ8wONtNpba802enpYYqZUEXONj74ZUD-LUAnEv_oKZQZXKCTtGY2YqJwIPhm5hvMVUlzZ1e1g1xsRRF-8x8gZ2XavQvjEiqyTyezMl_fXWju3aXDeSUIMyvS6dxKX5tE_MLg69pQ_aOvnH8fmE-BpcFlWfXytld-9zeAEOL7-Q6rSp5W4NaCvuSU17KpYu8StYrbHqWsmIANZQ1MoW5si44_XXsJO-LlNOct0awsfY4BHoM9p3x-ff_a9RuNWJdAyIg4Ss3MjISnvVvxqTxcy-FGCgT3WSAZw4K0YcUGUS39eP28UHQNj1Jk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "view",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/permission/create",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"permission",
+								"create"
+							]
+						},
+						"description": "Create new permission."
+					},
+					"response": []
+				},
+				{
+					"name": "Permission List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZmU0OGIyODBmOWY3MDAzNTE2MGE2MWViMmQwMTliZTMzYzcyMDM0ZTI2OTlmYWZjYTFmMjk1N2I3MmFiOThmOTM0NzU0YzY1ZWRlYTQ2M2QiLCJpYXQiOjE3MzM1MDgxNTYuMTk4NDg3LCJuYmYiOjE3MzM1MDgxNTYuMTk4NDk1LCJleHAiOjE3NjUwNDQxNTUuODkyNzkzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TzYSrnHP8WfLvGtyoqbs6WPQ7-WgIjTWmsOH9KfnamHmtZXXA95vVtVpqVxBq5nIBdd2J8c2VLZGOKT4zC1XE2OWBP8vw6p6WMLFz8wtR5O3s_emEiazLB5DNYqJiuERrEKpRrVn9XvvbsFCmE0mtZtDn3SPld4wUNIJD_-hktP6Xt3N7_6AfsvcPTZbtjCLcFQoW2vX3yJGFxQt-4FRkURo6bbGvdPmk_lEyztGLqAZXBzgeEOlJsaKOOWW9mW3_kMB0Z41mLr1A-Z-NDVKs4hAtVH6-5lhMgrp9fJldGHYmBrObUxCAgJWmcOuUQ5A77N0veJ82ZdV_RyOoZGFRDNQLS6_5IklSePogFCyw1krnJ5R9aTQ8wONtNpba802enpYYqZUEXONj74ZUD-LUAnEv_oKZQZXKCTtGY2YqJwIPhm5hvMVUlzZ1e1g1xsRRF-8x8gZ2XavQvjEiqyTyezMl_fXWju3aXDeSUIMyvS6dxKX5tE_MLg69pQ_aOvnH8fmE-BpcFlWfXytld-9zeAEOL7-Q6rSp5W4NaCvuSU17KpYu8StYrbHqWsmIANZQ1MoW5si44_XXsJO-LlNOct0awsfY4BHoM9p3x-ff_a9RuNWJdAyIg4Ss3MjISnvVvxqTxcy-FGCgT3WSAZw4K0YcUGUS39eP28UHQNj1Jk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/permission/list",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"permission",
+								"list"
+							]
+						},
+						"description": "Permission list."
+					},
+					"response": [
+						{
+							"name": "Permission List",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZmU0OGIyODBmOWY3MDAzNTE2MGE2MWViMmQwMTliZTMzYzcyMDM0ZTI2OTlmYWZjYTFmMjk1N2I3MmFiOThmOTM0NzU0YzY1ZWRlYTQ2M2QiLCJpYXQiOjE3MzM1MDgxNTYuMTk4NDg3LCJuYmYiOjE3MzM1MDgxNTYuMTk4NDk1LCJleHAiOjE3NjUwNDQxNTUuODkyNzkzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TzYSrnHP8WfLvGtyoqbs6WPQ7-WgIjTWmsOH9KfnamHmtZXXA95vVtVpqVxBq5nIBdd2J8c2VLZGOKT4zC1XE2OWBP8vw6p6WMLFz8wtR5O3s_emEiazLB5DNYqJiuERrEKpRrVn9XvvbsFCmE0mtZtDn3SPld4wUNIJD_-hktP6Xt3N7_6AfsvcPTZbtjCLcFQoW2vX3yJGFxQt-4FRkURo6bbGvdPmk_lEyztGLqAZXBzgeEOlJsaKOOWW9mW3_kMB0Z41mLr1A-Z-NDVKs4hAtVH6-5lhMgrp9fJldGHYmBrObUxCAgJWmcOuUQ5A77N0veJ82ZdV_RyOoZGFRDNQLS6_5IklSePogFCyw1krnJ5R9aTQ8wONtNpba802enpYYqZUEXONj74ZUD-LUAnEv_oKZQZXKCTtGY2YqJwIPhm5hvMVUlzZ1e1g1xsRRF-8x8gZ2XavQvjEiqyTyezMl_fXWju3aXDeSUIMyvS6dxKX5tE_MLg69pQ_aOvnH8fmE-BpcFlWfXytld-9zeAEOL7-Q6rSp5W4NaCvuSU17KpYu8StYrbHqWsmIANZQ1MoW5si44_XXsJO-LlNOct0awsfY4BHoM9p3x-ff_a9RuNWJdAyIg4Ss3MjISnvVvxqTxcy-FGCgT3WSAZw4K0YcUGUS39eP28UHQNj1Jk",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/permission/list",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"permission",
+										"list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 08 Dec 2024 05:35:39 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Data fetch successfully.\",\n    \"data_list\": [\n        {\n            \"id\": 3,\n            \"name\": \"edit articles\",\n            \"guard_name\": \"api\",\n            \"created_at\": \"2024-12-07T15:16:46.000000Z\",\n            \"updated_at\": \"2024-12-07T15:16:46.000000Z\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"post articles\",\n            \"guard_name\": \"api\",\n            \"created_at\": \"2024-12-07T15:17:00.000000Z\",\n            \"updated_at\": \"2024-12-07T15:17:00.000000Z\"\n        },\n        {\n            \"id\": 6,\n            \"name\": \"delete articles\",\n            \"guard_name\": \"api\",\n            \"created_at\": \"2024-12-07T20:07:11.000000Z\",\n            \"updated_at\": \"2024-12-07T20:07:11.000000Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Permission Edit",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZmU0OGIyODBmOWY3MDAzNTE2MGE2MWViMmQwMTliZTMzYzcyMDM0ZTI2OTlmYWZjYTFmMjk1N2I3MmFiOThmOTM0NzU0YzY1ZWRlYTQ2M2QiLCJpYXQiOjE3MzM1MDgxNTYuMTk4NDg3LCJuYmYiOjE3MzM1MDgxNTYuMTk4NDk1LCJleHAiOjE3NjUwNDQxNTUuODkyNzkzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TzYSrnHP8WfLvGtyoqbs6WPQ7-WgIjTWmsOH9KfnamHmtZXXA95vVtVpqVxBq5nIBdd2J8c2VLZGOKT4zC1XE2OWBP8vw6p6WMLFz8wtR5O3s_emEiazLB5DNYqJiuERrEKpRrVn9XvvbsFCmE0mtZtDn3SPld4wUNIJD_-hktP6Xt3N7_6AfsvcPTZbtjCLcFQoW2vX3yJGFxQt-4FRkURo6bbGvdPmk_lEyztGLqAZXBzgeEOlJsaKOOWW9mW3_kMB0Z41mLr1A-Z-NDVKs4hAtVH6-5lhMgrp9fJldGHYmBrObUxCAgJWmcOuUQ5A77N0veJ82ZdV_RyOoZGFRDNQLS6_5IklSePogFCyw1krnJ5R9aTQ8wONtNpba802enpYYqZUEXONj74ZUD-LUAnEv_oKZQZXKCTtGY2YqJwIPhm5hvMVUlzZ1e1g1xsRRF-8x8gZ2XavQvjEiqyTyezMl_fXWju3aXDeSUIMyvS6dxKX5tE_MLg69pQ_aOvnH8fmE-BpcFlWfXytld-9zeAEOL7-Q6rSp5W4NaCvuSU17KpYu8StYrbHqWsmIANZQ1MoW5si44_XXsJO-LlNOct0awsfY4BHoM9p3x-ff_a9RuNWJdAyIg4Ss3MjISnvVvxqTxcy-FGCgT3WSAZw4K0YcUGUS39eP28UHQNj1Jk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/permission/1/edit",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"permission",
+								"1",
+								"edit"
+							]
+						},
+						"description": "Permisssion edit."
+					},
+					"response": []
+				},
+				{
+					"name": "Permission Update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZmU0OGIyODBmOWY3MDAzNTE2MGE2MWViMmQwMTliZTMzYzcyMDM0ZTI2OTlmYWZjYTFmMjk1N2I3MmFiOThmOTM0NzU0YzY1ZWRlYTQ2M2QiLCJpYXQiOjE3MzM1MDgxNTYuMTk4NDg3LCJuYmYiOjE3MzM1MDgxNTYuMTk4NDk1LCJleHAiOjE3NjUwNDQxNTUuODkyNzkzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TzYSrnHP8WfLvGtyoqbs6WPQ7-WgIjTWmsOH9KfnamHmtZXXA95vVtVpqVxBq5nIBdd2J8c2VLZGOKT4zC1XE2OWBP8vw6p6WMLFz8wtR5O3s_emEiazLB5DNYqJiuERrEKpRrVn9XvvbsFCmE0mtZtDn3SPld4wUNIJD_-hktP6Xt3N7_6AfsvcPTZbtjCLcFQoW2vX3yJGFxQt-4FRkURo6bbGvdPmk_lEyztGLqAZXBzgeEOlJsaKOOWW9mW3_kMB0Z41mLr1A-Z-NDVKs4hAtVH6-5lhMgrp9fJldGHYmBrObUxCAgJWmcOuUQ5A77N0veJ82ZdV_RyOoZGFRDNQLS6_5IklSePogFCyw1krnJ5R9aTQ8wONtNpba802enpYYqZUEXONj74ZUD-LUAnEv_oKZQZXKCTtGY2YqJwIPhm5hvMVUlzZ1e1g1xsRRF-8x8gZ2XavQvjEiqyTyezMl_fXWju3aXDeSUIMyvS6dxKX5tE_MLg69pQ_aOvnH8fmE-BpcFlWfXytld-9zeAEOL7-Q6rSp5W4NaCvuSU17KpYu8StYrbHqWsmIANZQ1MoW5si44_XXsJO-LlNOct0awsfY4BHoM9p3x-ff_a9RuNWJdAyIg4Ss3MjISnvVvxqTxcy-FGCgT3WSAZw4K0YcUGUS39eP28UHQNj1Jk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "delete",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/permission/6/update",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"permission",
+								"6",
+								"update"
+							]
+						},
+						"description": "Permission update by permission id."
+					},
+					"response": []
+				},
+				{
+					"name": "Permission Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZmU0OGIyODBmOWY3MDAzNTE2MGE2MWViMmQwMTliZTMzYzcyMDM0ZTI2OTlmYWZjYTFmMjk1N2I3MmFiOThmOTM0NzU0YzY1ZWRlYTQ2M2QiLCJpYXQiOjE3MzM1MDgxNTYuMTk4NDg3LCJuYmYiOjE3MzM1MDgxNTYuMTk4NDk1LCJleHAiOjE3NjUwNDQxNTUuODkyNzkzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TzYSrnHP8WfLvGtyoqbs6WPQ7-WgIjTWmsOH9KfnamHmtZXXA95vVtVpqVxBq5nIBdd2J8c2VLZGOKT4zC1XE2OWBP8vw6p6WMLFz8wtR5O3s_emEiazLB5DNYqJiuERrEKpRrVn9XvvbsFCmE0mtZtDn3SPld4wUNIJD_-hktP6Xt3N7_6AfsvcPTZbtjCLcFQoW2vX3yJGFxQt-4FRkURo6bbGvdPmk_lEyztGLqAZXBzgeEOlJsaKOOWW9mW3_kMB0Z41mLr1A-Z-NDVKs4hAtVH6-5lhMgrp9fJldGHYmBrObUxCAgJWmcOuUQ5A77N0veJ82ZdV_RyOoZGFRDNQLS6_5IklSePogFCyw1krnJ5R9aTQ8wONtNpba802enpYYqZUEXONj74ZUD-LUAnEv_oKZQZXKCTtGY2YqJwIPhm5hvMVUlzZ1e1g1xsRRF-8x8gZ2XavQvjEiqyTyezMl_fXWju3aXDeSUIMyvS6dxKX5tE_MLg69pQ_aOvnH8fmE-BpcFlWfXytld-9zeAEOL7-Q6rSp5W4NaCvuSU17KpYu8StYrbHqWsmIANZQ1MoW5si44_XXsJO-LlNOct0awsfY4BHoM9p3x-ff_a9RuNWJdAyIg4Ss3MjISnvVvxqTxcy-FGCgT3WSAZw4K0YcUGUS39eP28UHQNj1Jk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/permission/2/delete",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"permission",
+								"2",
+								"delete"
+							]
+						},
+						"description": "Permisssion delete by permisson id."
+					},
+					"response": []
+				},
+				{
+					"name": "Role Add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZmU0OGIyODBmOWY3MDAzNTE2MGE2MWViMmQwMTliZTMzYzcyMDM0ZTI2OTlmYWZjYTFmMjk1N2I3MmFiOThmOTM0NzU0YzY1ZWRlYTQ2M2QiLCJpYXQiOjE3MzM1MDgxNTYuMTk4NDg3LCJuYmYiOjE3MzM1MDgxNTYuMTk4NDk1LCJleHAiOjE3NjUwNDQxNTUuODkyNzkzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TzYSrnHP8WfLvGtyoqbs6WPQ7-WgIjTWmsOH9KfnamHmtZXXA95vVtVpqVxBq5nIBdd2J8c2VLZGOKT4zC1XE2OWBP8vw6p6WMLFz8wtR5O3s_emEiazLB5DNYqJiuERrEKpRrVn9XvvbsFCmE0mtZtDn3SPld4wUNIJD_-hktP6Xt3N7_6AfsvcPTZbtjCLcFQoW2vX3yJGFxQt-4FRkURo6bbGvdPmk_lEyztGLqAZXBzgeEOlJsaKOOWW9mW3_kMB0Z41mLr1A-Z-NDVKs4hAtVH6-5lhMgrp9fJldGHYmBrObUxCAgJWmcOuUQ5A77N0veJ82ZdV_RyOoZGFRDNQLS6_5IklSePogFCyw1krnJ5R9aTQ8wONtNpba802enpYYqZUEXONj74ZUD-LUAnEv_oKZQZXKCTtGY2YqJwIPhm5hvMVUlzZ1e1g1xsRRF-8x8gZ2XavQvjEiqyTyezMl_fXWju3aXDeSUIMyvS6dxKX5tE_MLg69pQ_aOvnH8fmE-BpcFlWfXytld-9zeAEOL7-Q6rSp5W4NaCvuSU17KpYu8StYrbHqWsmIANZQ1MoW5si44_XXsJO-LlNOct0awsfY4BHoM9p3x-ff_a9RuNWJdAyIg4Ss3MjISnvVvxqTxcy-FGCgT3WSAZw4K0YcUGUS39eP28UHQNj1Jk",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"user\",\r\n    \"permisssion_data\": {\r\n        \"7\":\"view\"\r\n    }\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/role/create",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"role",
+								"create"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Create new role to assign permission."
+					},
+					"response": []
+				},
+				{
+					"name": "RoleList",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZjE0ZTU0MzUwYmQyZDBmYzY1NTYwNjI2NGYwYjY4MmEwOTVmMDMzODg3ODcwYTVjYWY5ZGRkYjMzZDAxNzc3MjczOGRiOTlhM2UxYWMzYzUiLCJpYXQiOjE3MzM2NzAyODkuOTY4NDA4LCJuYmYiOjE3MzM2NzAyODkuOTY4NDEzLCJleHAiOjE3NjUyMDYyODkuNTIwODQ2LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.AU0Ue8SH-BmOmklO4wBCVD7jaeIiU-Y9hkgpSlAiioTSRWQm7d_LiB9KrYQSaLTyJwDgWAfa02ftgBbXeacxtHc-sSQ3PaIUGBaeoJYdxRAy69WStSJepCti1s0VGPP1giuHS_K3XNVdEB4ghd2x0oZwc42JNCtqlSoD770VZ1_CZ2bgd49fZ93psW-UWWdiA6CE-gGHvHsqnbtanB8nK286p6hk3x6lYzhNY2DO0rTijPcOVtH3vsUO6_ILO_U09amKydzayozZyiCwuPyCHGmxCWPE-tyGMdWTfsxEnwERMRHA5SgXGSAbjMg-iGvJraJ2dr93PsSWu1zSiGb_VIWIZSRPVOCOYe50-8OEMX_kC9PwuHlUbeGLgidgV65M51f2S-ML9oxUom8LM37yBpFG6QYys8wWiQHUNoMluTTz43CChQbw_Qd7yYp9t0XzXS26fvNrCvjiKjcMKgpLgiQRW1QkLRrOTw6TOB8ZBpluJFtDJALu__a1GpjKaubXj_4huedgYS-XENK948O5mkKJAPTvBy5ld3hbTlAwG2ID1wpfcat-irXpz5xtYRzEvNCjl3z_wtsU3C0lW9lDWnG1tKwmxgxTaxPicT9JcYYWAfbPYL_UTFGKh1B_RMvvkMI9S_lJW8Pz1F0Tf1jVtb5oIRlZqlsAvCBs8MfUyfk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/role/list",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"role",
+								"list"
+							]
+						},
+						"description": "Show all role also assigning permission."
+					},
+					"response": [
+						{
+							"name": "RoleList",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZjE0ZTU0MzUwYmQyZDBmYzY1NTYwNjI2NGYwYjY4MmEwOTVmMDMzODg3ODcwYTVjYWY5ZGRkYjMzZDAxNzc3MjczOGRiOTlhM2UxYWMzYzUiLCJpYXQiOjE3MzM2NzAyODkuOTY4NDA4LCJuYmYiOjE3MzM2NzAyODkuOTY4NDEzLCJleHAiOjE3NjUyMDYyODkuNTIwODQ2LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.AU0Ue8SH-BmOmklO4wBCVD7jaeIiU-Y9hkgpSlAiioTSRWQm7d_LiB9KrYQSaLTyJwDgWAfa02ftgBbXeacxtHc-sSQ3PaIUGBaeoJYdxRAy69WStSJepCti1s0VGPP1giuHS_K3XNVdEB4ghd2x0oZwc42JNCtqlSoD770VZ1_CZ2bgd49fZ93psW-UWWdiA6CE-gGHvHsqnbtanB8nK286p6hk3x6lYzhNY2DO0rTijPcOVtH3vsUO6_ILO_U09amKydzayozZyiCwuPyCHGmxCWPE-tyGMdWTfsxEnwERMRHA5SgXGSAbjMg-iGvJraJ2dr93PsSWu1zSiGb_VIWIZSRPVOCOYe50-8OEMX_kC9PwuHlUbeGLgidgV65M51f2S-ML9oxUom8LM37yBpFG6QYys8wWiQHUNoMluTTz43CChQbw_Qd7yYp9t0XzXS26fvNrCvjiKjcMKgpLgiQRW1QkLRrOTw6TOB8ZBpluJFtDJALu__a1GpjKaubXj_4huedgYS-XENK948O5mkKJAPTvBy5ld3hbTlAwG2ID1wpfcat-irXpz5xtYRzEvNCjl3z_wtsU3C0lW9lDWnG1tKwmxgxTaxPicT9JcYYWAfbPYL_UTFGKh1B_RMvvkMI9S_lJW8Pz1F0Tf1jVtb5oIRlZqlsAvCBs8MfUyfk",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/role/list",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"role",
+										"list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 08 Dec 2024 15:05:25 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Data fetch successfully.\",\n    \"data_list\": [\n        {\n            \"id\": 2,\n            \"name\": \"admin\",\n            \"guard_name\": \"api\",\n            \"created_at\": \"2024-12-08T10:52:00.000000Z\",\n            \"updated_at\": \"2024-12-08T14:39:13.000000Z\",\n            \"permissions\": [\n                {\n                    \"id\": 3,\n                    \"name\": \"edit\",\n                    \"guard_name\": \"api\",\n                    \"created_at\": \"2024-12-07T15:16:46.000000Z\",\n                    \"updated_at\": \"2024-12-08T14:34:10.000000Z\",\n                    \"pivot\": {\n                        \"role_id\": 2,\n                        \"permission_id\": 3\n                    }\n                },\n                {\n                    \"id\": 4,\n                    \"name\": \"create\",\n                    \"guard_name\": \"api\",\n                    \"created_at\": \"2024-12-07T15:17:00.000000Z\",\n                    \"updated_at\": \"2024-12-08T14:34:54.000000Z\",\n                    \"pivot\": {\n                        \"role_id\": 2,\n                        \"permission_id\": 4\n                    }\n                },\n                {\n                    \"id\": 6,\n                    \"name\": \"delete\",\n                    \"guard_name\": \"api\",\n                    \"created_at\": \"2024-12-07T20:07:11.000000Z\",\n                    \"updated_at\": \"2024-12-08T14:35:10.000000Z\",\n                    \"pivot\": {\n                        \"role_id\": 2,\n                        \"permission_id\": 6\n                    }\n                },\n                {\n                    \"id\": 7,\n                    \"name\": \"view\",\n                    \"guard_name\": \"api\",\n                    \"created_at\": \"2024-12-08T14:36:09.000000Z\",\n                    \"updated_at\": \"2024-12-08T14:36:09.000000Z\",\n                    \"pivot\": {\n                        \"role_id\": 2,\n                        \"permission_id\": 7\n                    }\n                }\n            ]\n        },\n        {\n            \"id\": 3,\n            \"name\": \"staff\",\n            \"guard_name\": \"api\",\n            \"created_at\": \"2024-12-08T10:52:43.000000Z\",\n            \"updated_at\": \"2024-12-08T14:43:07.000000Z\",\n            \"permissions\": [\n                {\n                    \"id\": 3,\n                    \"name\": \"edit\",\n                    \"guard_name\": \"api\",\n                    \"created_at\": \"2024-12-07T15:16:46.000000Z\",\n                    \"updated_at\": \"2024-12-08T14:34:10.000000Z\",\n                    \"pivot\": {\n                        \"role_id\": 3,\n                        \"permission_id\": 3\n                    }\n                },\n                {\n                    \"id\": 4,\n                    \"name\": \"create\",\n                    \"guard_name\": \"api\",\n                    \"created_at\": \"2024-12-07T15:17:00.000000Z\",\n                    \"updated_at\": \"2024-12-08T14:34:54.000000Z\",\n                    \"pivot\": {\n                        \"role_id\": 3,\n                        \"permission_id\": 4\n                    }\n                },\n                {\n                    \"id\": 7,\n                    \"name\": \"view\",\n                    \"guard_name\": \"api\",\n                    \"created_at\": \"2024-12-08T14:36:09.000000Z\",\n                    \"updated_at\": \"2024-12-08T14:36:09.000000Z\",\n                    \"pivot\": {\n                        \"role_id\": 3,\n                        \"permission_id\": 7\n                    }\n                }\n            ]\n        },\n        {\n            \"id\": 4,\n            \"name\": \"user\",\n            \"guard_name\": \"api\",\n            \"created_at\": \"2024-12-08T14:44:43.000000Z\",\n            \"updated_at\": \"2024-12-08T14:44:43.000000Z\",\n            \"permissions\": [\n                {\n                    \"id\": 7,\n                    \"name\": \"view\",\n                    \"guard_name\": \"api\",\n                    \"created_at\": \"2024-12-08T14:36:09.000000Z\",\n                    \"updated_at\": \"2024-12-08T14:36:09.000000Z\",\n                    \"pivot\": {\n                        \"role_id\": 4,\n                        \"permission_id\": 7\n                    }\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Role Edit",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZmU0OGIyODBmOWY3MDAzNTE2MGE2MWViMmQwMTliZTMzYzcyMDM0ZTI2OTlmYWZjYTFmMjk1N2I3MmFiOThmOTM0NzU0YzY1ZWRlYTQ2M2QiLCJpYXQiOjE3MzM1MDgxNTYuMTk4NDg3LCJuYmYiOjE3MzM1MDgxNTYuMTk4NDk1LCJleHAiOjE3NjUwNDQxNTUuODkyNzkzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TzYSrnHP8WfLvGtyoqbs6WPQ7-WgIjTWmsOH9KfnamHmtZXXA95vVtVpqVxBq5nIBdd2J8c2VLZGOKT4zC1XE2OWBP8vw6p6WMLFz8wtR5O3s_emEiazLB5DNYqJiuERrEKpRrVn9XvvbsFCmE0mtZtDn3SPld4wUNIJD_-hktP6Xt3N7_6AfsvcPTZbtjCLcFQoW2vX3yJGFxQt-4FRkURo6bbGvdPmk_lEyztGLqAZXBzgeEOlJsaKOOWW9mW3_kMB0Z41mLr1A-Z-NDVKs4hAtVH6-5lhMgrp9fJldGHYmBrObUxCAgJWmcOuUQ5A77N0veJ82ZdV_RyOoZGFRDNQLS6_5IklSePogFCyw1krnJ5R9aTQ8wONtNpba802enpYYqZUEXONj74ZUD-LUAnEv_oKZQZXKCTtGY2YqJwIPhm5hvMVUlzZ1e1g1xsRRF-8x8gZ2XavQvjEiqyTyezMl_fXWju3aXDeSUIMyvS6dxKX5tE_MLg69pQ_aOvnH8fmE-BpcFlWfXytld-9zeAEOL7-Q6rSp5W4NaCvuSU17KpYu8StYrbHqWsmIANZQ1MoW5si44_XXsJO-LlNOct0awsfY4BHoM9p3x-ff_a9RuNWJdAyIg4Ss3MjISnvVvxqTxcy-FGCgT3WSAZw4K0YcUGUS39eP28UHQNj1Jk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/role/1/edit",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"role",
+								"1",
+								"edit"
+							]
+						},
+						"description": "Give a list by passing role id."
+					},
+					"response": []
+				},
+				{
+					"name": "Role Update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZmU0OGIyODBmOWY3MDAzNTE2MGE2MWViMmQwMTliZTMzYzcyMDM0ZTI2OTlmYWZjYTFmMjk1N2I3MmFiOThmOTM0NzU0YzY1ZWRlYTQ2M2QiLCJpYXQiOjE3MzM1MDgxNTYuMTk4NDg3LCJuYmYiOjE3MzM1MDgxNTYuMTk4NDk1LCJleHAiOjE3NjUwNDQxNTUuODkyNzkzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TzYSrnHP8WfLvGtyoqbs6WPQ7-WgIjTWmsOH9KfnamHmtZXXA95vVtVpqVxBq5nIBdd2J8c2VLZGOKT4zC1XE2OWBP8vw6p6WMLFz8wtR5O3s_emEiazLB5DNYqJiuERrEKpRrVn9XvvbsFCmE0mtZtDn3SPld4wUNIJD_-hktP6Xt3N7_6AfsvcPTZbtjCLcFQoW2vX3yJGFxQt-4FRkURo6bbGvdPmk_lEyztGLqAZXBzgeEOlJsaKOOWW9mW3_kMB0Z41mLr1A-Z-NDVKs4hAtVH6-5lhMgrp9fJldGHYmBrObUxCAgJWmcOuUQ5A77N0veJ82ZdV_RyOoZGFRDNQLS6_5IklSePogFCyw1krnJ5R9aTQ8wONtNpba802enpYYqZUEXONj74ZUD-LUAnEv_oKZQZXKCTtGY2YqJwIPhm5hvMVUlzZ1e1g1xsRRF-8x8gZ2XavQvjEiqyTyezMl_fXWju3aXDeSUIMyvS6dxKX5tE_MLg69pQ_aOvnH8fmE-BpcFlWfXytld-9zeAEOL7-Q6rSp5W4NaCvuSU17KpYu8StYrbHqWsmIANZQ1MoW5si44_XXsJO-LlNOct0awsfY4BHoM9p3x-ff_a9RuNWJdAyIg4Ss3MjISnvVvxqTxcy-FGCgT3WSAZw4K0YcUGUS39eP28UHQNj1Jk",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"staff\",\r\n    \"permisssion_data\": {\r\n        \"3\":\"edit\",\r\n        \"4\":\"create\",\r\n        \"7\":\"view\"\r\n    }\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/role/3/update",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"role",
+								"3",
+								"update"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Update role aslo assigining permission aslo."
+					},
+					"response": []
+				},
+				{
+					"name": "Role Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZjE0ZTU0MzUwYmQyZDBmYzY1NTYwNjI2NGYwYjY4MmEwOTVmMDMzODg3ODcwYTVjYWY5ZGRkYjMzZDAxNzc3MjczOGRiOTlhM2UxYWMzYzUiLCJpYXQiOjE3MzM2NzAyODkuOTY4NDA4LCJuYmYiOjE3MzM2NzAyODkuOTY4NDEzLCJleHAiOjE3NjUyMDYyODkuNTIwODQ2LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.AU0Ue8SH-BmOmklO4wBCVD7jaeIiU-Y9hkgpSlAiioTSRWQm7d_LiB9KrYQSaLTyJwDgWAfa02ftgBbXeacxtHc-sSQ3PaIUGBaeoJYdxRAy69WStSJepCti1s0VGPP1giuHS_K3XNVdEB4ghd2x0oZwc42JNCtqlSoD770VZ1_CZ2bgd49fZ93psW-UWWdiA6CE-gGHvHsqnbtanB8nK286p6hk3x6lYzhNY2DO0rTijPcOVtH3vsUO6_ILO_U09amKydzayozZyiCwuPyCHGmxCWPE-tyGMdWTfsxEnwERMRHA5SgXGSAbjMg-iGvJraJ2dr93PsSWu1zSiGb_VIWIZSRPVOCOYe50-8OEMX_kC9PwuHlUbeGLgidgV65M51f2S-ML9oxUom8LM37yBpFG6QYys8wWiQHUNoMluTTz43CChQbw_Qd7yYp9t0XzXS26fvNrCvjiKjcMKgpLgiQRW1QkLRrOTw6TOB8ZBpluJFtDJALu__a1GpjKaubXj_4huedgYS-XENK948O5mkKJAPTvBy5ld3hbTlAwG2ID1wpfcat-irXpz5xtYRzEvNCjl3z_wtsU3C0lW9lDWnG1tKwmxgxTaxPicT9JcYYWAfbPYL_UTFGKh1B_RMvvkMI9S_lJW8Pz1F0Tf1jVtb5oIRlZqlsAvCBs8MfUyfk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/role/1/delete",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"role",
+								"1",
+								"delete"
+							]
+						},
+						"description": "Delete a role by given role id."
+					},
+					"response": [
+						{
+							"name": "Role Delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZjE0ZTU0MzUwYmQyZDBmYzY1NTYwNjI2NGYwYjY4MmEwOTVmMDMzODg3ODcwYTVjYWY5ZGRkYjMzZDAxNzc3MjczOGRiOTlhM2UxYWMzYzUiLCJpYXQiOjE3MzM2NzAyODkuOTY4NDA4LCJuYmYiOjE3MzM2NzAyODkuOTY4NDEzLCJleHAiOjE3NjUyMDYyODkuNTIwODQ2LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.AU0Ue8SH-BmOmklO4wBCVD7jaeIiU-Y9hkgpSlAiioTSRWQm7d_LiB9KrYQSaLTyJwDgWAfa02ftgBbXeacxtHc-sSQ3PaIUGBaeoJYdxRAy69WStSJepCti1s0VGPP1giuHS_K3XNVdEB4ghd2x0oZwc42JNCtqlSoD770VZ1_CZ2bgd49fZ93psW-UWWdiA6CE-gGHvHsqnbtanB8nK286p6hk3x6lYzhNY2DO0rTijPcOVtH3vsUO6_ILO_U09amKydzayozZyiCwuPyCHGmxCWPE-tyGMdWTfsxEnwERMRHA5SgXGSAbjMg-iGvJraJ2dr93PsSWu1zSiGb_VIWIZSRPVOCOYe50-8OEMX_kC9PwuHlUbeGLgidgV65M51f2S-ML9oxUom8LM37yBpFG6QYys8wWiQHUNoMluTTz43CChQbw_Qd7yYp9t0XzXS26fvNrCvjiKjcMKgpLgiQRW1QkLRrOTw6TOB8ZBpluJFtDJALu__a1GpjKaubXj_4huedgYS-XENK948O5mkKJAPTvBy5ld3hbTlAwG2ID1wpfcat-irXpz5xtYRzEvNCjl3z_wtsU3C0lW9lDWnG1tKwmxgxTaxPicT9JcYYWAfbPYL_UTFGKh1B_RMvvkMI9S_lJW8Pz1F0Tf1jVtb5oIRlZqlsAvCBs8MfUyfk",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/role/1/delete",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"role",
+										"1",
+										"delete"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 08 Dec 2024 15:09:46 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User does not have the right permissions.\",\n    \"exception\": \"Spatie\\\\Permission\\\\Exceptions\\\\UnauthorizedException\",\n    \"file\": \"G:\\\\xampp_php_v8.2.12\\\\htdocs\\\\user-role\\\\vendor\\\\spatie\\\\laravel-permission\\\\src\\\\Exceptions\\\\UnauthorizedException.php\",\n    \"line\": 36,\n    \"trace\": [\n        {\n            \"file\": \"G:\\\\xampp_php_v8.2.12\\\\htdocs\\\\user-role\\\\vendor\\\\spatie\\\\laravel-permission\\\\src\\\\Middleware\\\\PermissionMiddleware.php\",\n            \"line\": 36,\n            \"function\": \"forPermissions\",\n            \"class\": \"Spatie\\\\Permission\\\\Exceptions\\\\UnauthorizedException\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"G:\\\\xampp_php_v8.2.12\\\\htdocs\\\\user-role\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Spatie\\\\Permission\\\\Middleware\\\\PermissionMiddleware\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"G:\\\\xampp_php_v8.2.12\\\\htdocs\\\\user-role\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Middleware\\\\SubstituteBindings.php\",\n            \"line\": 51,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"G:\\\\xampp_php_v8.2.12\\\\htdocs\\\\user-role\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\SubstituteBindings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"G:\\\\xampp_php_v8.2.12\\\\htdocs\\\\user-role\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Auth\\\\Middleware\\\\Authenticate.php\",\n            \"line\": 64,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"G:\\\\xampp_php_v8.2.12\\\\htdocs\\\\user-role\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Auth\\\\Middleware\\\\Authenticate\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"G:\\\\xampp_php_v8.2.12\\\\htdocs\\\\user-role\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 119,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"G:\\\\xampp_php_v8.2.12\\\\htdocs\\\\user-role\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 807,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"G:\\\\xampp_php_v8.2.12\\\\htdocs\\\\user-role\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 786,\n            \"function\": \"runRouteWithinStack\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"G:\\\\xampp_php_v8.2.12\\\\htdocs\\\\user-role\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 750,\n            \"function\": \"runRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"G:\\\\xampp_php_v8.2.12\\\\htdocs\\\\user-role\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 739,\n            \"function\": \"dispatchToRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"G:\\\\xampp_php_v8.2.12\\\\htdocs\\\\user-role\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 201,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"G:\\\\xampp_php_v8.2.12\\\\htdocs\\\\user-role\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 144,\n            \"function\": \"Illuminate\\\\Foundation\\\\Http\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"G:\\\\xampp_php_v8.2.12\\\\htdocs\\\\user-role\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"G:\\\\xampp_php_v8.2.12\\\\htdocs\\\\user-role\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull.php\",\n            \"line\": 31,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"G:\\\\xampp_php_v8.2.12\\\\htdocs\\\\user-role\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"G:\\\\xampp_php_v8.2.12\\\\htdocs\\\\user-role\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"G:\\\\xampp_php_v8.2.12\\\\htdocs\\\\user-role\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings.php\",\n            \"line\": 51,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"G:\\\\xampp_php_v8.2.12\\\\htdocs\\\\user-role\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"G:\\\\xampp_php_v8.2.12\\\\htdocs\\\\user-role\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\ValidatePostSize.php\",\n            \"line\": 27,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"G:\\\\xampp_php_v8.2.12\\\\htdocs\\\\user-role\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\ValidatePostSize\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"G:\\\\xampp_php_v8.2.12\\\\htdocs\\\\user-role\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance.php\",\n            \"line\": 110,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"G:\\\\xampp_php_v8.2.12\\\\htdocs\\\\user-role\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"G:\\\\xampp_php_v8.2.12\\\\htdocs\\\\user-role\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\HandleCors.php\",\n            \"line\": 62,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"G:\\\\xampp_php_v8.2.12\\\\htdocs\\\\user-role\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\HandleCors\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"G:\\\\xampp_php_v8.2.12\\\\htdocs\\\\user-role\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\TrustProxies.php\",\n            \"line\": 58,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"G:\\\\xampp_php_v8.2.12\\\\htdocs\\\\user-role\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\TrustProxies\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"G:\\\\xampp_php_v8.2.12\\\\htdocs\\\\user-role\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\InvokeDeferredCallbacks.php\",\n            \"line\": 22,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"G:\\\\xampp_php_v8.2.12\\\\htdocs\\\\user-role\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 183,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\InvokeDeferredCallbacks\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"G:\\\\xampp_php_v8.2.12\\\\htdocs\\\\user-role\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 119,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"G:\\\\xampp_php_v8.2.12\\\\htdocs\\\\user-role\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 176,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"G:\\\\xampp_php_v8.2.12\\\\htdocs\\\\user-role\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 145,\n            \"function\": \"sendRequestThroughRouter\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"G:\\\\xampp_php_v8.2.12\\\\htdocs\\\\user-role\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Application.php\",\n            \"line\": 1190,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"G:\\\\xampp_php_v8.2.12\\\\htdocs\\\\user-role\\\\public\\\\index.php\",\n            \"line\": 17,\n            \"function\": \"handleRequest\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"G:\\\\xampp_php_v8.2.12\\\\htdocs\\\\user-role\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\resources\\\\server.php\",\n            \"line\": 23,\n            \"function\": \"require_once\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Role Assign",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZmU0OGIyODBmOWY3MDAzNTE2MGE2MWViMmQwMTliZTMzYzcyMDM0ZTI2OTlmYWZjYTFmMjk1N2I3MmFiOThmOTM0NzU0YzY1ZWRlYTQ2M2QiLCJpYXQiOjE3MzM1MDgxNTYuMTk4NDg3LCJuYmYiOjE3MzM1MDgxNTYuMTk4NDk1LCJleHAiOjE3NjUwNDQxNTUuODkyNzkzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TzYSrnHP8WfLvGtyoqbs6WPQ7-WgIjTWmsOH9KfnamHmtZXXA95vVtVpqVxBq5nIBdd2J8c2VLZGOKT4zC1XE2OWBP8vw6p6WMLFz8wtR5O3s_emEiazLB5DNYqJiuERrEKpRrVn9XvvbsFCmE0mtZtDn3SPld4wUNIJD_-hktP6Xt3N7_6AfsvcPTZbtjCLcFQoW2vX3yJGFxQt-4FRkURo6bbGvdPmk_lEyztGLqAZXBzgeEOlJsaKOOWW9mW3_kMB0Z41mLr1A-Z-NDVKs4hAtVH6-5lhMgrp9fJldGHYmBrObUxCAgJWmcOuUQ5A77N0veJ82ZdV_RyOoZGFRDNQLS6_5IklSePogFCyw1krnJ5R9aTQ8wONtNpba802enpYYqZUEXONj74ZUD-LUAnEv_oKZQZXKCTtGY2YqJwIPhm5hvMVUlzZ1e1g1xsRRF-8x8gZ2XavQvjEiqyTyezMl_fXWju3aXDeSUIMyvS6dxKX5tE_MLg69pQ_aOvnH8fmE-BpcFlWfXytld-9zeAEOL7-Q6rSp5W4NaCvuSU17KpYu8StYrbHqWsmIANZQ1MoW5si44_XXsJO-LlNOct0awsfY4BHoM9p3x-ff_a9RuNWJdAyIg4Ss3MjISnvVvxqTxcy-FGCgT3WSAZw4K0YcUGUS39eP28UHQNj1Jk",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"role_data\": \r\n    {\r\n        \"3\":\"staff\"\r\n    }\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/role/2/assign",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"role",
+								"2",
+								"assign"
+							]
+						},
+						"description": "After createing a user need to assign and edit his role."
+					},
+					"response": []
+				}
+			],
+			"description": "User role permission assign."
+		}
+	]
+}

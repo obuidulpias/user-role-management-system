@@ -8,9 +8,18 @@ use App\Http\Requests\Auth\SignupRequest;
 use App\Models\User;
 use App\Repositories\Auth\AuthRepository;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controllers\HasMiddleware;
+use Illuminate\Routing\Controllers\Middleware;
 
-class AuthController extends Controller
+class AuthController extends Controller implements HasMiddleware
 {
+
+    public static function middleware(): array
+    {
+        return [
+            new Middleware('permission:view', only: ['users']),
+        ];
+    }
     protected $user;
     public function __construct(User $user)
     {
